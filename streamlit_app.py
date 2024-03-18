@@ -28,7 +28,7 @@ st.write(
 st.subheader(
     "2. What are the best 3 products in each location of a user based on quantity?"
 )
-st.dataframe(sql_df2, height=35 * len(sql_df2) + 38)
+st.dataframe(sql_df2, height=35 * len(sql_df2) + 38, width=800)
 # A2
 st.write(
     "Above output captures top 3 best products per user city location based on purchased quantity."
