@@ -47,6 +47,9 @@ fig1 = px.line(
     title="SalesTrend Over Time",
 )
 st.plotly_chart(fig1, use_container_width=True)
+st.write(
+    "Analysis suggests that **October and November** were high-sales periods, possibly due to seasonal promotional events."
+)
 
 # Adding columns for two charts
 col1, col2 = st.columns(2)
@@ -71,6 +74,9 @@ with col1:
         width=1000,
     ).update_yaxes(type="category", categoryorder="max ascending")
     st.plotly_chart(fig2, use_container_width=True)
+    st.write(
+        "**User B** is the top spender during the captured period in the dataset with a total spend of ~**$5.9M**."
+    )
 
 with col2:
     user_city_sales = (
@@ -87,3 +93,6 @@ with col2:
         title="Total Sales By City",
     )
     st.plotly_chart(fig3, use_container_width=True)
+    st.write(
+        "The sales revenue is almost **equally distributed** across all the user geographies.  "
+    )
