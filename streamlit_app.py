@@ -10,11 +10,10 @@ fact_order = pd.read_pickle("./data/fact_order.pkl")
 sql_df1 = pd.read_pickle("./data/sql_df1.pkl")
 sql_df2 = pd.read_pickle("./data/sql_df2.pkl")
 
-# Streamlit app title
 st.title("Sales insights")
 
-# Answers to the questions
-st.header("Answers to the questions")
+# Answers to task questions
+st.header("Answers to task questions")
 
 # Q1
 st.subheader("1. Which user spent the most money on products on all Fridays?")
@@ -48,7 +47,7 @@ fig1 = px.line(
 )
 st.plotly_chart(fig1, use_container_width=True)
 st.write(
-    "Analysis suggests that **October and November** were high-sales periods, possibly due to seasonal promotional events."
+    "Analysis suggests spike in sales during end **October**, possibly due to seasonal promotional event."
 )
 
 # Adding columns for two charts
